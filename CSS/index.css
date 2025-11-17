@@ -1,0 +1,154 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #24292e;
+  color: #606289;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+header.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #24292e;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5rem;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+header .site-logo {
+  max-height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+nav.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav.site-nav a {
+  color: grey;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+  padding-bottom: 4px;
+}
+
+nav.site-nav a:hover,
+nav.site-nav a.active {
+  color: #fffdfd;
+  border-bottom-color: yellow;
+}
+
+/* Main content wrapper to prevent header overlap */
+main {
+  padding-top: 110px; /* height of fixed header + some margin */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Sections */
+section {
+  margin-bottom: 6rem;
+  min-height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+/* Hero Section */
+#hero-section .hero-text {
+  flex: 1 1 500px;
+  max-width: 600px;
+  padding: 1rem;
+}
+
+#hero-section .hero-text h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+#hero-section .hero-text h3 {
+  color: #606289;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+#midd-text {
+  color: rgb(115, 32, 145);
+  font-weight: 600;
+}
+
+#hero-section .hero-image {
+  flex: 1 1 300px;
+  padding: 1rem;
+  text-align: center;
+}
+
+#hero-section .hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+}
+
+/* Other sections */
+section h2 {
+  color: white;
+  font-size: 2.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+section p {
+  color: #8889a5;
+  font-size: 1.1rem;
+  max-width: 700px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #hero-section .hero-text,
+  #hero-section .hero-image {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  nav.site-nav ul {
+    gap: 1rem;
+  }
+
+  header.site-header {
+    padding: 1rem 2rem;
+  }
+}
